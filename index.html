@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faris MR | Systems Administrator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles\style.css"></link>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Sticky Navbar -->
+    <nav class="navbar fixed top-0 w-full z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="text-white text-2xl font-bold">Faris Mujibur Rahman</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-white hover:text-blue-200 transition duration-300">Home</a>
+                    <a href="#experience" class="text-white hover:text-blue-200 transition duration-300">Experience</a>
+                    <a href="#documentations" class="text-white hover:text-blue-200 transition duration-300">Documentations</a>
+                    <a href="#certifications" class="text-white hover:text-blue-200 transition duration-300">Certifications</a>
+                    <a href="#contact" class="text-white hover:text-blue-200 transition duration-300">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6", fill="none", stroke="currentColor", viewBox="0 0 24 24", xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a href="#home" class="block px-3 py-2 text-white hover:bg-blue-700 rounded-md">Home</a>
+                    <a href="#experience" class="block px-3 py-2 text-white hover:bg-blue-700 rounded-md">Experience</a>
+                    <a href="#documentations" class="block px-3 py-2 text-white hover:bg-blue-700 rounded-md">Documentations</a>
+                    <a href="#certifications", class="block px-3 py-2 text-white hover:bg-blue-700 rounded-md">Certifications</a>
+                    <a href="#contact", class="block px-3 py-2 text-white hover:bg-blue-700 rounded-md">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Combined Hero & About Section -->
+    <section id="home" class="hero-section gradient-bg text-white">
+        <div class="hero-content">
+            <div class="flex flex-col lg:flex-row items-center justify-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pl-8 text-center lg:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Faris Mujibur Rahman</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">IT Enthusiast</h2>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl mb-8 mx-auto lg:mx-0 max-w-2xl">
+                        <p class="text-lg mb-4">
+                            I am a student who has an interest in the world of IT, especially system administration.
+                        </p>
+                        <p class="text-lg">
+                            Currently pursuing my degree in Computer Science while gaining practical experience through various IT projects and internships.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-white text-blue-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300 text-center">
+                            Contact Me
+                        </a>
+                        <a href="/files/cv-faris.pdf" target="_blank" class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-800 transition duration-300 text-center">
+                            View my resume
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 flex flex-col items-center mt-12 lg:mt-0 lg:pl-20">
+                    <div class="relative mb-8 profile-image">
+                        <div class="absolute inset-0 bg-blue-400 rounded-full opacity-20 animate-pulse"></div>
+                        <div class="absolute inset-4 bg-blue-500 rounded-full opacity-20 animate-pulse delay-100"></div>
+                        <img src="/files/profile/azusa.jpg" alt="Azusa Aizawa" 
+                             class="absolute inset-0 w-full h-full rounded-full object-cover border-4 border-white shadow-xl">
+                    </div>
+                    
+                    <div class="w-full max-w-md bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4 text-center">Core Skills</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-cloud text-blue-300 mr-2"></i>
+                                <span>Cloud Computing</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-shield-alt text-blue-300 mr-2"></i>
+                                <span>Network Security</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fab fa-linux text-blue-300 mr-2"></i>
+                                <span>Linux Administration</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-robot text-blue-300 mr-2"></i>
+                                <span>Scripting</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-network-wired text-blue-300 mr-2"></i>
+                                <span>Networking</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-database text-blue-300 mr-2"></i>
+                                <span>Database Basics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#experience" class="animate-bounce inline-block">
+                    <i class="fas fa-chevron-down text-2xl text-white opacity-70 hover:opacity-100 transition duration-300"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Experience & Academic Projects</h2>
+            
+            <div class="space-y-8">
+                <!-- Internship 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex flex-col md:flex-row justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <div class="flex items-center space-x-2">
+                                <h3 class="text-xl font-semibold">Technical Support</h3>
+                                <span class="experience-tag internship-tag">Internship</span>
+                            </div>
+                            <p class="text-blue-600">PT. Maxindo Mitra Solution</p>
+                        </div>
+                        <div class="text-gray-500">
+                            <p>Jan 2024 - Jun 2024</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Conduct surveys and consultations with clients onsite and then map network paths</li>
+                            <li>conducting surveys and network planning at client locations</li>
+                            <li>Performing on-site maintenance and making reports on client networks</li>
+                            <li>Working with the team during the installation process so that work is more structured and
+                                according to plan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- School Project 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex flex-col md:flex-row justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <div class="flex items-center space-x-2">
+                                <h3 class="text-xl font-semibold">User Hotspot Management with PCQ (Mikrotik)</h3>
+                                <span class="experience-tag school-project-tag">School Project</span>
+                            </div>
+                            <p class="text-blue-600">SMK Wikrama Bogor</p>
+                        </div>
+                        <div class="text-gray-500">
+                            <p>oct 2024</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Utilized PCQ (Per Connection Queue) on MikroTik to efficiently manage and balance bandwidth among an excessive number of hotspot users</li>
+                            <li>Created a simple firewall rule to redirect hotspot user traffic, ensuring proper functionality of the PCQ (Per Connection Queue) </li>
+                        </ul>
+                    </div>
+                </div>                
+                
+                <!-- School Project 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex flex-col md:flex-row justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <div class="flex items-center space-x-2">
+                                <h3 class="text-xl font-semibold">FTTH Project x AWS Cloud</h3>
+                                <span class="experience-tag school-project-tag">School Project</span>
+                            </div>
+                            <p class="text-blue-600">SMK Wikrama Bogor</p>
+                        </div>
+                        <div class="text-gray-500">
+                            <p>Sep 2024</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Performed fiber optic cable installation across the school environment, from the field area to the classrooms</li>
+                            <li>Configured PPPoE and hotspot servers, and implemented QoS settings on the MikroTik router</li>
+                            <li>Developed a dynamic website using PHP and MySQL for student data entry purposes</li>
+                            <li>Deployed the dynamic website on an AWS EC2 instance</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentations Section -->
+    <section id="documentations" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">My Documentations</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- documentation 1 -->
+                <div class="documentation-card bg-gray-50 p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="h-40 bg-blue-100 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-server text-5xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Home Lab Automation</h3>
+                    <p class="text-gray-600 mb-4">Automated setup for my home lab environment using Ansible and Docker containers.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Ansible</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Docker</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Linux</span>
+                    </div>
+                    <a href="#" class="text-blue-600 font-medium hover:underline">View Details →</a>
+                </div>
+                
+                <!-- documentation 2 -->
+                <div class="documentation-card bg-gray-50 p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="h-40 bg-green-100 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-5xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Network Security Dashboard</h3>
+                    <p class="text-gray-600 mb-4">Personal project to monitor and visualize network security events from my home network.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">ELK Stack</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Security</span>
+                    </div>
+                    <a href="#" class="text-green-600 font-medium hover:underline">View Details →</a>
+                </div>
+                
+                <!-- documentation 3 -->
+                <div class="documentation-card bg-gray-50 p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="h-40 bg-purple-100 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-cloud text-5xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Cloud Resume Challenge</h3>
+                    <p class="text-gray-600 mb-4">Implemented my resume as a serverless web application on AWS.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">AWS</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Terraform</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">CI/CD</span>
+                    </div>
+                    <a href="#" class="text-purple-600 font-medium hover:underline">View Details →</a>
+                </div>
+                
+                <div class="text-center mt-12 lg:col-start-2">
+                    <a href="#" class="documentation-card bg-gray-50 rounded-xl shadow-md transition duration-300 text-gray-600 px-6 py-3">
+                        see other documentations<i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Certifications & Courses</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Cert 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="h-16 mb-4 flex justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Azure" class="h-full">
+                    </div>
+                    <h3 class="font-semibold mb-2">Microsoft Azure Fundamentals</h3>
+                    <p class="text-gray-500 text-sm">2023</p>
+                </div>
+                
+                <!-- Cert 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="h-16 mb-4 flex justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" class="h-full">
+                    </div>
+                    <h3 class="font-semibold mb-2">AWS Cloud Practitioner</h3>
+                    <p class="text-gray-500 text-sm">2022</p>
+                </div>
+                
+                <!-- Cert 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="h-16 mb-4 flex justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Red_Hat_Logo.svg" alt="Red Hat" class="h-full">
+                    </div>
+                    <h3 class="font-semibold mb-2">Red Hat System Administration I</h3>
+                    <p class="text-gray-500 text-sm">2022</p>
+                </div>
+                
+                <!-- Cert 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="h-16 mb-4 flex justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg" alt="Cisco" class="h-full">
+                    </div>
+                    <h3 class="font-semibold mb-2">Cisco Networking Academy</h3>
+                    <p class="text-gray-500 text-sm">2021</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <p class="text-gray-600 mb-6">I'm always open to discussing internship opportunities, collaboration on projects, or just connecting with fellow tech enthusiasts!</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Email</p>
+                                <p class="font-medium">alex.carter@student.tech.edu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Phone</p>
+                                <p class="font-medium">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-purple-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Location</p>
+                                <p class="font-medium">Chicago, IL</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Connect With Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-200 p-3 rounded-full hover:bg-blue-100 transition duration-300">
+                                <i class="fab fa-linkedin-in text-blue-600"></i>
+                            </a>
+                            <a href="#" class="bg-gray-200 p-3 rounded-full hover:bg-gray-300 transition duration-300">
+                                <i class="fab fa-github text-gray-700"></i>
+                            </a>
+                            <a href="#" class="bg-gray-200 p-3 rounded-full hover:bg-blue-100 transition duration-300">
+                                <i class="fab fa-twitter text-blue-400"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-gray-50 p-6 rounded-xl shadow-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-7 00 text-white py-3 px-4 rounded-lg font-medium transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-xl font-semibold">Faris Mujibur Rahman</p>
+                    <p class="opacity-80">Aspiring Systems Administrator</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:opacity-80 transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:opacity-80 transition duration-300"><i class="fab fa-github"></i></a>
+                    <a href="#" class="hover:opacity-80 transition duration-300"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js\main.js"></script>
+</body>
+</html>

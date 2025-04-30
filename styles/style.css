@@ -1,0 +1,74 @@
+.gradient-bg {
+    background: linear-gradient(135deg, #0b96f3 0%, #54c9ff 100%);
+}
+
+/* hero styles */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding: 2rem; */
+    padding-top: 5rem;
+}
+.profile-image {
+    width: 220px;
+    height: 220px;
+}
+@media (min-width: 768px) {
+    .profile-image {
+        width: 280px;
+        height: 280px;
+    }
+}
+@media (min-width: 1024px) {
+    .profile-image {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+/* Navbar styles */
+.navbar {
+    transition: all 0.3s ease;
+}
+.navbar.scrolled {
+    background-color: #007ACC;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.13), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.mobile-menu.open {
+    max-height: 500px;
+}
+
+/* experience styles */
+.experience-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.internship-tag {
+    background-color: #f0f9ff;
+    color: #0369a1;
+}
+.school-project-tag {
+    background-color: #f0fdf4;
+    color: #15803d;
+}
+
+/* documentation styles */
+.documentation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
