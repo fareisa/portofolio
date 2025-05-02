@@ -1,0 +1,77 @@
+/* documentation style */
+
+.sidebar {
+    transition: all 0.3s ease;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+.content {
+    transition: all 0.3s ease;
+    margin-left: 16rem; /* Same as sidebar width */
+}
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+    }
+    .sidebar {
+        z-index: 50;
+        transform: translateX(-100%);
+    }
+    .sidebar.open {
+        transform: translateX(0);
+    }
+}
+.active-doc {
+    background-color: #3b82f6;
+    color: white;
+}
+.doc-section {
+    display: none;
+}
+.doc-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.code-block {
+    background-color: #1e293b;
+    color: #f8fafc;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    font-family: monospace;
+    overflow-x: auto;
+}
+pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+.table-of-contents li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.table-of-contents li:before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    color: #3b82f6;
+}
+/* Custom scrollbar for sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar::-webkit-scrollbar-track {
+    background: #1a202c;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: #4a5568;
+    border-radius: 3px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+}
+
+/* documentation style */

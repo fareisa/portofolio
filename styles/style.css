@@ -1,6 +1,15 @@
+@import "dokumentation.css";
+
+/* global style */
+
 .gradient-bg {
     background: linear-gradient(135deg, #0b96f3 0%, #54c9ff 100%);
 }
+
+/* Global styles */
+
+
+/* portofolio style */
 
 /* hero styles */
 .hero-section {
@@ -12,7 +21,8 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    /* padding: 2rem; */
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-top: 5rem;
 }
 .profile-image {
@@ -73,3 +83,5 @@
     transform: translateY(-5px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
+
+/* portofolio style */

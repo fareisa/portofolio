@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Faris Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css ">
+    <link rel="stylesheet" href="styles\style.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Mobile Header -->
+    <header class="md:hidden bg-gray-800 text-white p-4 flex justify-between items-center sticky top-0 z-40">
+        <h1 class="text-xl font-bold">SysAdmin Docs</h1>
+        <button id="mobile-menu-toggle" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </header>
+    
+    <!-- Sidebar Navigation -->
+    <div class="sidebar bg-gray-900 text-white w-64 flex-shrink-0">
+        <div class="p-4 border-b border-gray-700 sticky top-0 bg-gray-900 z-10">
+            <h1 class="text-xl font-bold">Faris MR</h1>
+            <p class="text-gray-400 text-sm">Documentation</p>
+        </div>
+        
+        <nav class="p-4">
+            <div class="mb-6">
+                <a href="portfolio.html" class="flex items-center space-x-2 text-blue-400 hover:text-blue-300">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Portfolio</span>
+                </a>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-gray-500 uppercase text-xs font-semibold mb-3 tracking-wider">Documentation</h3>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="doc-nav-link flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800 active-doc" data-section="overview">
+                            <i class="fas fa-home"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="doc-nav-link flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800" data-section="architecture">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Architecture</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="doc-nav-link flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800" data-section="installation">
+                            <i class="fas fa-download"></i>
+                            <span>Installation</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="doc-nav-link flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800" data-section="configuration">
+                            <i class="fas fa-cog"></i>
+                            <span>Configuration</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="doc-nav-link flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800" data-section="troubleshooting">
+                            <i class="fas fa-bug"></i>
+                            <span>Troubleshooting</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="doc-nav-link flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800" data-section="api">
+                            <i class="fas fa-code"></i>
+                            <span>API Reference</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-gray-500 uppercase text-xs font-semibold mb-3 tracking-wider">Projects</h3>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800">
+                            <i class="fas fa-server"></i>
+                            <span>Cloud Migration</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security Upgrade</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Network Redesign</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="p-4 border-t border-gray-700 sticky bottom-0 bg-gray-900">
+            <p class="text-gray-400 text-sm">Last updated: <span id="last-updated">June 15, 2023</span></p>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+    
+    <!-- Main Content -->
+    <div class="content p-6 md:p-8">
+        <!-- Overview Section -->
+        <section id="overview" class="doc-section active">
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Project Overview</h2>
+                <p class="text-gray-600 mb-6">
+                    This documentation covers the implementation of a highly available, scalable infrastructure for enterprise applications.
+                    The project involved migrating from traditional on-premise servers to a cloud-native architecture using Kubernetes and Terraform.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                        <h3 class="font-semibold text-blue-800 mb-2">Objective</h3>
+                        <p class="text-gray-700">Create a resilient infrastructure with 99.99% uptime SLA</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                        <h3 class="font-semibold text-green-800 mb-2">Technologies</h3>
+                        <p class="text-gray-700">Kubernetes, Terraform, AWS, Prometheus, Grafana</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg border border-purple-100">
+                        <h3 class="font-semibold text-purple-800 mb-2">Duration</h3>
+                        <p class="text-gray-700">6 months (Jan 2023 - Jun 2023)</p>
+                    </div>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Key Features</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600 mb-6">
+                    <li>Automated infrastructure provisioning with Terraform</li>
+                    <li>Container orchestration with Kubernetes</li>
+                    <li>CI/CD pipeline integration</li>
+                    <li>Comprehensive monitoring and alerting</li>
+                    <li>Disaster recovery implementation</li>
+                    <li>Security hardening and compliance</li>
+                </ul>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Project Timeline</h3>
+                <div class="border-l-2 border-blue-200 pl-4 mb-6">
+                    <div class="relative pb-8">
+                        <div class="flex items-start mb-1">
+                            <div class="bg-blue-600 rounded-full h-4 w-4 absolute -left-5 mt-1"></div>
+                            <div class="ml-2">
+                                <p class="font-medium">Phase 1: Planning</p>
+                                <p class="text-sm text-gray-500">Jan 1 - Jan 15</p>
+                            </div>
+                        </div>
+                        <p class="ml-6 text-gray-600 mb-4">Requirements gathering and architecture design</p>
+                    </div>
+                    <div class="relative pb-8">
+                        <div class="flex items-start mb-1">
+                            <div class="bg-blue-600 rounded-full h-4 w-4 absolute -left-5 mt-1"></div>
+                            <div class="ml-2">
+                                <p class="font-medium">Phase 2: Implementation</p>
+                                <p class="text-sm text-gray-500">Jan 16 - Apr 30</p>
+                            </div>
+                        </div>
+                        <p class="ml-6 text-gray-600 mb-4">Infrastructure provisioning and application migration</p>
+                    </div>
+                    <div class="relative">
+                        <div class="flex items-start mb-1">
+                            <div class="bg-blue-600 rounded-full h-4 w-4 absolute -left-5 mt-1"></div>
+                            <div class="ml-2">
+                                <p class="font-medium">Phase 3: Testing & Go-Live</p>
+                                <p class="text-sm text-gray-500">May 1 - Jun 15</p>
+                            </div>
+                        </div>
+                        <p class="ml-6 text-gray-600">Performance testing and production deployment</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Table of Contents</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Infrastructure</h3>
+                        <ul class="table-of-contents space-y-2 text-gray-600">
+                            <li><a href="#" class="hover:text-blue-600" data-section="architecture">System Architecture</a></li>
+                            <li><a href="#" class="hover:text-blue-600" data-section="installation">Installation Guide</a></li>
+                            <li><a href="#" class="hover:text-blue-600" data-section="configuration">Configuration Options</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Scaling Procedures</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Backup & Recovery</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Operations</h3>
+                        <ul class="table-of-contents space-y-2 text-gray-600">
+                            <li><a href="#" class="hover:text-blue-600" data-section="troubleshooting">Troubleshooting</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Monitoring Setup</a></li>
+                            <li><a href="#" class="hover:text-blue-600" data-section="api">API Reference</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Security Guidelines</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Performance Tuning</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Architecture Section -->
+        <section id="architecture" class="doc-section">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">System Architecture</h2>
+                <p class="text-gray-600 mb-6">
+                    The infrastructure is designed with high availability and scalability in mind, leveraging cloud-native technologies
+                    and following infrastructure-as-code principles.
+                </p>
+                
+                <div class="mb-8">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_4QAlA3QpQwv0K6hN6TQ4Q.png" 
+                         alt="System Architecture Diagram" class="w-full rounded-lg border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">High-level architecture diagram</p>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Components</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-blue-700 mb-2">Compute Layer</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>Kubernetes cluster with 3 master nodes</li>
+                            <li>Auto-scaling worker node groups</li>
+                            <li>Spot instances for non-critical workloads</li>
+                            <li>Fargate for serverless containers</li>
+                        </ul>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-blue-700 mb-2">Network Layer</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>VPC with public and private subnets</li>
+                            <li>Application Load Balancers</li>
+                            <li>WAF with OWASP rules</li>
+                            <li>VPN and Direct Connect for hybrid</li>
+                        </ul>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-blue-700 mb-2">Storage Layer</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>EBS for block storage</li>
+                            <li>EFS for shared file storage</li>
+                            <li>S3 for object storage</li>
+                            <li>RDS Aurora for databases</li>
+                        </ul>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-blue-700 mb-2">Security Layer</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>IAM roles with least privilege</li>
+                            <li>Secrets management with Vault</li>
+                            <li>Network ACLs and security groups</li>
+                            <li>Certificate Manager for TLS</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Data Flow</h3>
+                <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                    <ol class="list-decimal pl-5 space-y-2 text-gray-700">
+                        <li>User requests hit the Application Load Balancer</li>
+                        <li>ALB routes traffic to Kubernetes ingress controller</li>
+                        <li>Ingress routes to appropriate service based on path</li>
+                        <li>Service selects pod with matching labels</li>
+                        <li>Application processes request, accessing data stores as needed</li>
+                        <li>Response follows reverse path back to user</li>
+                    </ol>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">High Availability Design</h3>
+                <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-blue-800 mb-1">Multi-AZ Deployment</h4>
+                            <p class="text-sm text-gray-700">All critical components deployed across 3 availability zones</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-blue-800 mb-1">Auto Recovery</h4>
+                            <p class="text-sm text-gray-700">EC2 auto-recovery configured for critical instances</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-blue-800 mb-1">Database Replication</h4>
+                            <p class="text-sm text-gray-700">Aurora with 6 replicas across AZs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Installation Section -->
+        <section id="installation" class="doc-section">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Installation Guide</h2>
+                <p class="text-gray-600 mb-6">
+                    Follow these steps to install and configure the infrastructure components. The process is automated using Terraform
+                    and can be customized based on your requirements.
+                </p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Prerequisites</h3>
+                <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                        <li>AWS account with admin privileges</li>
+                        <li>Terraform 1.0+ installed</li>
+                        <li>kubectl configured</li>
+                        <li>Git for version control</li>
+                        <li>SSH key pair for EC2 instances</li>
+                    </ul>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Terraform Setup</h3>
+                <div class="mb-8">
+                    <div class="code-block mb-4">
+                        <pre># Clone the repository
+git clone https://github.com/your-repo/infrastructure.git
+cd infrastructure</pre>
+                    </div>
+                    
+                    <div class="code-block mb-4">
+                        <pre># Initialize Terraform
+terraform init</pre>
+                    </div>
+                    
+                    <div class="code-block mb-4">
+                        <pre># Review the execution plan
+terraform plan</pre>
+                    </div>
+                    
+                    <div class="code-block">
+                        <pre># Apply the configuration
+terraform apply</pre>
+                    </div>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Kubernetes Setup</h3>
+                <div class="mb-8">
+                    <div class="code-block mb-4">
+                        <pre># Configure kubectl
+aws eks --region us-west-2 update-kubeconfig --name cluster-name</pre>
+                    </div>
+                    
+                    <div class="code-block mb-4">
+                        <pre># Verify cluster access
+kubectl get nodes</pre>
+                    </div>
+                    
+                    <div class="code-block">
+                        <pre># Install cluster components
+kubectl apply -f k8s/</pre>
+                    </div>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Verification</h3>
+                <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-green-800 mb-1">Terraform Outputs</h4>
+                            <div class="code-block">
+                                <pre>terraform output</pre>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-green-800 mb-1">Kubernetes Status</h4>
+                            <div class="code-block">
+                                <pre>kubectl get all --all-namespaces</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Configuration Section -->
+        <section id="configuration" class="doc-section">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Configuration Options</h2>
+                <p class="text-gray-600 mb-6">
+                    The system can be customized through various configuration files and environment variables. Below are the key
+                    configuration points and their possible values.
+                </p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Terraform Variables</h3>
+                <div class="overflow-x-auto mb-8">
+                    <table class="min-w-full border border-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Variable</th>
+                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
+                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Default</th>
+                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Required</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">cluster_name</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">Name of the EKS cluster</td>
+                                <td class="px-4 py-2 text-sm font-mono text-gray-600">"prod-cluster"</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">No</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">region</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">AWS region</td>
+                                <td class="px-4 py-2 text-sm font-mono text-gray-600">"us-west-2"</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">No</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">node_instance_type</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">EC2 instance type for worker nodes</td>
+                                <td class="px-4 py-2 text-sm font-mono text-gray-600">"m5.large"</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">No</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">min_nodes</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">Minimum number of worker nodes</td>
+                                <td class="px-4 py-2 text-sm font-mono text-gray-600">3</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">No</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">max_nodes</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">Maximum number of worker nodes</td>
+                                <td class="px-4 py-2 text-sm font-mono text-gray-600">10</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">No</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Kubernetes ConfigMaps</h3>
+                <div class="mb-8">
+                    <div class="code-block mb-4">
+                        <pre>apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  APP_ENV: "production"
+  DB_HOST: "aurora-cluster.endpoint.rds.amazonaws.com"
+  CACHE_ENABLED: "true"</pre>
+                    </div>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Environment Variables</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full border border-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Variable</th>
+                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Purpose</th>
+                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Example Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">LOG_LEVEL</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">Application logging level</td>
+                                <td class="px-4 py-2 text-sm font-mono text-gray-600">"INFO"</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">MAX_THREADS</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">Worker thread count</td>
+                                <td class="px-4 py-2 text-sm font-mono text-gray-600">"4"</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">FEATURE_FLAG_X</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">Enable experimental feature</td>
+                                <td class="px-4 py-2 text-sm font-mono text-gray-600">"false"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Troubleshooting Section -->
+        <section id="troubleshooting" class="doc-section">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Troubleshooting Guide</h2>
+                <p class="text-gray-600 mb-6">
+                    This section covers common issues you might encounter and how to resolve them. For issues not covered here,
+                    please check the monitoring system or contact support.
+                </p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Common Issues</h3>
+                <div class="space-y-6 mb-8">
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-red-600 mb-2">Nodes not joining cluster</h4>
+                        <p class="text-gray-600 mb-3">Worker nodes fail to join the Kubernetes cluster after creation.</p>
+                        <div class="bg-gray-50 p-3 rounded">
+                            <p class="font-medium text-gray-700 mb-1">Solution:</p>
+                            <ol class="list-decimal pl-5 space-y-1 text-gray-600">
+                                <li>Verify IAM role permissions for nodes</li>
+                                <li>Check security group rules allow traffic on port 443</li>
+                                <li>Ensure the aws-auth ConfigMap is properly configured</li>
+                                <li>Review EC2 instance logs for errors</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-red-600 mb-2">Persistent volume claims pending</h4>
+                        <p class="text-gray-600 mb-3">PVCs remain in pending state and don't get bound to PVs.</p>
+                        <div class="bg-gray-50 p-3 rounded">
+                            <p class="font-medium text-gray-700 mb-1">Solution:</p>
+                            <ol class="list-decimal pl-5 space-y-1 text-gray-600">
+                                <li>Check storage class exists and is default</li>
+                                <li>Verify EBS volumes can be created in the AZ</li>
+                                <li>Ensure there are no AWS service limits reached</li>
+                                <li>Review storage class parameters</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-red-600 mb-2">High CPU utilization</h4>
+                        <p class="text-gray-600 mb-3">Nodes show consistently high CPU usage leading to performance issues.</p>
+                        <div class="bg-gray-50 p-3 rounded">
+                            <p class="font-medium text-gray-700 mb-1">Solution:</p>
+                            <ol class="list-decimal pl-5 space-y-1 text-gray-600">
+                                <li>Identify top processes using kubectl top pods</li>
+                                <li>Check for runaway processes or infinite loops</li>
+                                <li>Review HPA configuration for autoscaling</li>
+                                <li>Consider moving to larger instance types</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Diagnostic Commands</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <h4 class="font-semibold text-blue-700 mb-2">Cluster Information</h4>
+                        <div class="code-block">
+                            <pre>kubectl cluster-info
+kubectl get componentstatuses</pre>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-blue-700 mb-2">Node Status</h4>
+                        <div class="code-block">
+                            <pre>kubectl get nodes -o wide
+kubectl describe node &lt;node-name&gt;</pre>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-blue-700 mb-2">Pod Debugging</h4>
+                        <div class="code-block">
+                            <pre>kubectl get pods --all-namespaces
+kubectl logs &lt;pod-name&gt; -c &lt;container&gt;
+kubectl exec -it &lt;pod-name&gt; -- bash</pre>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-blue-700 mb-2">Network Checks</h4>
+                        <div class="code-block">
+                            <pre>kubectl get svc,ep,ingress
+kubectl run test-$RANDOM --rm -i --tty --image busybox -- sh</pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Monitoring & Logging</h3>
+                <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-blue-800 mb-1">Prometheus</h4>
+                            <p class="text-sm text-gray-700">Access at http://prometheus.monitoring.svc.cluster.local:9090</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-blue-800 mb-1">Grafana</h4>
+                            <p class="text-sm text-gray-700">Access at http://grafana.monitoring.svc.cluster.local:3000</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-blue-800 mb-1">Kibana</h4>
+                            <p class="text-sm text-gray-700">Access at http://kibana.logging.svc.cluster.local:5601</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-blue-800 mb-1">Alertmanager</h4>
+                            <p class="text-sm text-gray-700">Access at http://alertmanager.monitoring.svc.cluster.local:9093</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- API Reference Section -->
+        <section id="api" class="doc-section">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">API Reference</h2>
+                <p class="text-gray-600 mb-6">
+                    The management API provides programmatic access to control and monitor the infrastructure. All API endpoints
+                    require authentication via JWT tokens.
+                </p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Authentication</h3>
+                <div class="mb-8">
+                    <p class="text-gray-600 mb-4">
+                        Obtain an access token by authenticating with your credentials. Include the token in the Authorization
+                        header for subsequent requests.
+                    </p>
+                    
+                    <div class="code-block mb-4">
+                        <pre>POST /api/v1/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "your-password"
+}</pre>
+                    </div>
+                    
+                    <div class="code-block">
+                        <pre># Response
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "expires_in": 3600
+}</pre>
+                    </div>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Endpoints</h3>
+                <div class="overflow-x-auto mb-8">
+                    <table class="min-w-full border border-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Method</th>
+                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Path</th>
+                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-green-600">GET</td>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">/api/v1/nodes</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">List all cluster nodes</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-green-600">GET</td>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">/api/v1/nodes/{id}</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">Get node details</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">POST</td>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">/api/v1/nodes</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">Add new node to cluster</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-yellow-600">PATCH</td>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">/api/v1/nodes/{id}</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">Update node configuration</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-red-600">DELETE</td>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">/api/v1/nodes/{id}</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">Remove node from cluster</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 text-sm font-mono text-green-600">GET</td>
+                                <td class="px-4 py-2 text-sm font-mono text-blue-600">/api/v1/health</td>
+                                <td class="px-4 py-2 text-sm text-gray-600">Check system health</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Example Requests</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-blue-700 mb-2">List Nodes</h4>
+                        <div class="code-block mb-2">
+                            <pre>GET /api/v1/nodes
+Authorization: Bearer &lt;token&gt;</pre>
+                        </div>
+                        <div class="code-block">
+                            <pre>{
+  "data": [
+    {
+      "id": "i-0123456789abcdef0",
+      "name": "ip-10-0-1-10.ec2.internal",
+      "status": "Ready",
+      "roles": ["worker"],
+      "capacity": {
+        "cpu": "2",
+        "memory": "8Gi"
+      }
+    }
+  ]
+}</pre>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-blue-700 mb-2">Check Health</h4>
+                        <div class="code-block mb-2">
+                            <pre>GET /api/v1/health
+Authorization: Bearer &lt;token&gt;</pre>
+                        </div>
+                        <div class="code-block">
+                            <pre>{
+  "status": "healthy",
+  "components": {
+    "database": "ok",
+    "cache": "ok",
+    "storage": "ok"
+  },
+  "uptime": "99.98%"
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>   
+    </div>
+
+    
+    <script src="js\documentation.js"></script>
+</body>
+</html>
