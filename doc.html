@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation | Faris Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css ">
-    <link rel="stylesheet" href="styles\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Mobile Header -->
     <header class="md:hidden bg-gray-800 text-white p-4 flex justify-between items-center sticky top-0 z-40">
-        <h1 class="text-xl font-bold">SysAdmin Docs</h1>
+        <h1 class="text-xl font-bold">Faris Docs</h1>
         <button id="mobile-menu-toggle" class="text-white focus:outline-none">
             <i class="fas fa-bars text-xl"></i>
         </button>
@@ -20,8 +20,8 @@
     <!-- Sidebar Navigation -->
     <div class="sidebar bg-gray-900 text-white w-64 flex-shrink-0">
         <div class="p-4 border-b border-gray-700 sticky top-0 bg-gray-900 z-10">
-            <h1 class="text-xl font-bold">Faris MR</h1>
-            <p class="text-gray-400 text-sm">Documentation</p>
+            <h1 class="text-xl font-bold">Faris</h1>
+            <p class="text-gray-400 text-sm">Documentations</p>
         </div>
         
         <nav class="p-4">
@@ -34,68 +34,94 @@
             
             <div class="mb-8">
                 <h3 class="text-gray-500 uppercase text-xs font-semibold mb-3 tracking-wider">Documentation</h3>
-                <ul class="space-y-2">
-                    <li>
-                        <a href="#" class="doc-nav-link flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800 active-doc" data-section="overview">
-                            <i class="fas fa-home"></i>
-                            <span>Overview</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="doc-nav-link flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800" data-section="architecture">
-                            <i class="fas fa-project-diagram"></i>
-                            <span>Architecture</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="doc-nav-link flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800" data-section="installation">
-                            <i class="fas fa-download"></i>
-                            <span>Installation</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="doc-nav-link flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800" data-section="configuration">
-                            <i class="fas fa-cog"></i>
-                            <span>Configuration</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="doc-nav-link flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800" data-section="troubleshooting">
-                            <i class="fas fa-bug"></i>
-                            <span>Troubleshooting</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="doc-nav-link flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800" data-section="api">
-                            <i class="fas fa-code"></i>
-                            <span>API Reference</span>
-                        </a>
-                    </li>
-                </ul>
+                
+                <!-- Documentation Navigation Groups -->
+                <div class="space-y-1">
+                    <!-- Overview Group -->
+                    <div class="nav-group" data-group="overview">
+                        <div class="flex items-center justify-between px-3 py-2 rounded hover:bg-gray-800">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-home"></i>
+                                <span>Overview</span>
+                            </div>
+                            <i class="fas fa-chevron-right text-xs nav-group-icon"></i>
+                        </div>
+                        <div class="nav-group-content pl-8">
+                            <a href="#" class="doc-nav-link block px-3 py-2 rounded hover:bg-gray-800 active-doc" data-section="overview">
+                                Project Summary
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Infrastructure Group -->
+                    <div class="nav-group" data-group="infrastructure">
+                        <div class="flex items-center justify-between px-3 py-2 rounded hover:bg-gray-800">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-server"></i>
+                                <span>Infrastructure</span>
+                            </div>
+                            <i class="fas fa-chevron-right text-xs nav-group-icon"></i>
+                        </div>
+                        <div class="nav-group-content pl-8">
+                            <a href="#" class="doc-nav-link block px-3 py-2 rounded hover:bg-gray-800" data-section="architecture">
+                                Architecture
+                            </a>
+                            <a href="#" class="doc-nav-link block px-3 py-2 rounded hover:bg-gray-800" data-section="installation">
+                                Installation
+                            </a>
+                            <a href="#" class="doc-nav-link block px-3 py-2 rounded hover:bg-gray-800" data-section="configuration">
+                                Configuration
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Operations Group -->
+                    <div class="nav-group" data-group="operations">
+                        <div class="flex items-center justify-between px-3 py-2 rounded hover:bg-gray-800">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-cogs"></i>
+                                <span>Operations</span>
+                            </div>
+                            <i class="fas fa-chevron-right text-xs nav-group-icon"></i>
+                        </div>
+                        <div class="nav-group-content pl-8">
+                            <a href="#" class="doc-nav-link block px-3 py-2 rounded hover:bg-gray-800" data-section="troubleshooting">
+                                Troubleshooting
+                            </a>
+                            <a href="#" class="doc-nav-link block px-3 py-2 rounded hover:bg-gray-800" data-section="api">
+                                API Reference
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             
+            <!-- Certificates Section -->
             <div>
-                <h3 class="text-gray-500 uppercase text-xs font-semibold mb-3 tracking-wider">Projects</h3>
-                <ul class="space-y-2">
-                    <li>
-                        <a href="#" class="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800">
-                            <i class="fas fa-server"></i>
-                            <span>Cloud Migration</span>
+                <h3 class="text-gray-500 uppercase text-xs font-semibold mb-3 tracking-wider">Certificates</h3>
+                <div class="nav-group" data-group="certificates">
+                    <div class="flex items-center justify-between px-3 py-2 rounded hover:bg-gray-800">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-certificate"></i>
+                            <span>My Certifications</span>
+                        </div>
+                        <i class="fas fa-chevron-right text-xs nav-group-icon"></i>
+                    </div>
+                    <div class="nav-group-content pl-8">
+                        <a href="#" class="doc-nav-link block px-3 py-2 rounded hover:bg-gray-800" data-section="course">
+                            Course
                         </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Security Upgrade</span>
+                        <a href="#" class="doc-nav-link block px-3 py-2 rounded hover:bg-gray-800" data-section="kubernetes-cert">
+                            Webinar
                         </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-800">
-                            <i class="fas fa-network-wired"></i>
-                            <span>Network Redesign</span>
+                        <a href="#" class="doc-nav-link block px-3 py-2 rounded hover:bg-gray-800" data-section="security-cert">
+                            Seminar
                         </a>
-                    </li>
-                </ul>
+                        <a href="#" class="doc-nav-link block px-3 py-2 rounded hover:bg-gray-800" data-section="security-cert">
+                            Other
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav>
         
@@ -711,10 +737,158 @@ Authorization: Bearer &lt;token&gt;</pre>
                     </div>
                 </div>
             </div>
-        </section>   
+        </section>
+        
+        <!-- Certificates Sections -->
+        <section id="course" class="doc-section">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Course Certificates</h2>
+                <p class="text-gray-600 mb-6">
+                    Ini adalah beberapa sertifikat dari kursus online yang telah saya selesaikan.
+                </p>
+                
+                <div class="certificate-grid">
+                    <div class="certificate-card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <img src="files\certificates\mtcna.png" 
+                             alt="MTCNA Certificate" class="w-full h-48 object-contain p-4">
+                        <div class="p-4 border-t border-gray-200">
+                            <h3 class="font-semibold text-lg text-gray-800">MikroTik Certified Network Associate</h3>
+                            <p class="text-gray-600 text-sm">Diperoleh: April 2025</p>
+                            <p class="text-gray-600 text-sm mt-2">ID Sertifikat: 2504NA4522</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <img src="files\certificates\network-ess.png" 
+                             alt="Cisco Network Technician Career Path" class="w-full h-48 object-contain p-4">
+                        <div class="p-4 border-t border-gray-200">
+                            <h3 class="font-semibold text-lg text-gray-800">Cisco Network Technician Career Path</h3>
+                            <p class="text-gray-600 text-sm">Diperoleh: April 2025</p>
+                            <!-- <p class="text-gray-600 text-sm mt-2">ID sertifikat: DEF1234567890</p> -->
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <img src="files\certificates\cyber-jr.png" 
+                             alt="Cisco Cyber Security Junior Path" class="w-full h-48 object-contain p-4">
+                        <div class="p-4 border-t border-gray-200">
+                            <h3 class="font-semibold text-lg text-gray-800">Cisco Cyber Security Junior Path</h3>
+                            <p class="text-gray-600 text-sm">Diperoleh: April 2025</p>
+                            <!-- <p class="text-gray-600 text-sm mt-2">Validation ID: GHI1234567890</p> -->
+                        </div>
+                    </div>
+                    <div class="certificate-card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <img src="files\certificates\cloud.png" 
+                             alt="AWS Cloup Practioner Essential" class="w-full h-48 object-contain p-4">
+                        <div class="p-4 border-t border-gray-200">
+                            <h3 class="font-semibold text-lg text-gray-800">Dicoding AWS Cloup Practioner Essential</h3>
+                            <p class="text-gray-600 text-sm">Diperoleh: Februari 2025</p>
+                            <p class="text-gray-600 text-sm mt-2">ID sertifikat: MRZMN621RPYQ</p>
+                        </div>
+                    </div>
+                    <div class="certificate-card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <img src="files\certificates\ansible.png" 
+                             alt="Ansible Basic" class="w-full h-48 object-contain p-4">
+                        <div class="p-4 border-t border-gray-200">
+                            <h3 class="font-semibold text-lg text-gray-800">Btech Academy Ansible Basic</h3>
+                            <p class="text-gray-600 text-sm">Diperoleh: Februari 2025</p>
+                            <p class="text-gray-600 text-sm mt-2">ID sertifikat: C01003-00000-34273</p>
+                        </div>
+                    </div>
+                    <div class="certificate-card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <img src="files\certificates\network-bas.png" 
+                             alt="Cisco Network Basic" class="w-full h-48 object-contain p-4">
+                        <div class="p-4 border-t border-gray-200">
+                            <h3 class="font-semibold text-lg text-gray-800">Cisco Network Basic</h3>
+                            <p class="text-gray-600 text-sm">Diperoleh: Januari 2025</p>
+                            <!-- <p class="text-gray-600 text-sm mt-2">ID sertifikat: C01003-00000-34273</p> -->
+                        </div>
+                    </div>
+                    <div class="certificate-card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <img src="files\certificates\redhat.png" 
+                             alt="RHA 24" class="w-full h-48 object-contain p-4">
+                        <div class="p-4 border-t border-gray-200">
+                            <h3 class="font-semibold text-lg text-gray-800">Redhat System Administration </h3>
+                            <p class="text-gray-600 text-sm">Diperoleh: November 2024</p>
+                            <!-- <p class="text-gray-600 text-sm mt-2">ID sertifikat: C01003-00000-34273</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="kubernetes-cert" class="doc-section">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Kubernetes Certifications</h2>
+                <p class="text-gray-600 mb-6">
+                    Certifications demonstrating my expertise in Kubernetes administration and application development.
+                </p>
+                
+                <div class="certificate-grid">
+                    <div class="certificate-card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <img src="https://d36ai2hkxl16us.cloudfront.net/course-uploads/e0df3f1a-c27d-4e6a-a8c8-6717112aedb8/up2u8h1j3q6o-CKA-Badge.png" 
+                             alt="Certified Kubernetes Administrator" class="w-full h-48 object-contain p-4">
+                        <div class="p-4 border-t border-gray-200">
+                            <h3 class="font-semibold text-lg text-gray-800">Certified Kubernetes Administrator (CKA)</h3>
+                            <p class="text-gray-600 text-sm">Issued: April 2023</p>
+                            <p class="text-gray-600 text-sm mt-2">Validation ID: CKA-1234567890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <img src="https://d36ai2hkxl16us.cloudfront.net/course-uploads/e0df3f1a-c27d-4e6a-a8c8-6717112aedb8/up2u8h1j3q6o-CKAD-Badge.png" 
+                             alt="Certified Kubernetes Application Developer" class="w-full h-48 object-contain p-4">
+                        <div class="p-4 border-t border-gray-200">
+                            <h3 class="font-semibold text-lg text-gray-800">Certified Kubernetes Application Developer (CKAD)</h3>
+                            <p class="text-gray-600 text-sm">Issued: February 2023</p>
+                            <p class="text-gray-600 text-sm mt-2">Validation ID: CKAD-1234567890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="security-cert" class="doc-section">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Security Certifications</h2>
+                <p class="text-gray-600 mb-6">
+                    Certifications demonstrating my expertise in cloud security and compliance.
+                </p>
+                
+                <div class="certificate-grid">
+                    <div class="certificate-card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <img src="https://images.credly.com/images/0f6e3279-d71a-4af5-a3f7-405d9a610a9c/image.png" 
+                             alt="Certified Cloud Security Professional" class="w-full h-48 object-contain p-4">
+                        <div class="p-4 border-t border-gray-200">
+                            <h3 class="font-semibold text-lg text-gray-800">Certified Cloud Security Professional (CCSP)</h3>
+                            <p class="text-gray-600 text-sm">Issued: January 2023</p>
+                            <p class="text-gray-600 text-sm mt-2">Validation ID: CCSP-1234567890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <img src="https://images.credly.com/images/73e4a58b-a8ef-41a3-a7db-9183dd269882/image.png" 
+                             alt="AWS Certified Security Specialty" class="w-full h-48 object-contain p-4">
+                        <div class="p-4 border-t border-gray-200">
+                            <h3 class="font-semibold text-lg text-gray-800">AWS Certified Security - Specialty</h3>
+                            <p class="text-gray-600 text-sm">Issued: November 2022</p>
+                            <p class="text-gray-600 text-sm mt-2">Validation ID: AWS-SEC-1234567890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <img src="https://images.credly.com/images/5d3c5b2e-4b3e-4b3e-9b3e-5d3c5b2e4b3e/image.png" 
+                             alt="Certified Information Systems Security Professional" class="w-full h-48 object-contain p-4">
+                        <div class="p-4 border-t border-gray-200">
+                            <h3 class="font-semibold text-lg text-gray-800">CISSP</h3>
+                            <p class="text-gray-600 text-sm">Issued: September 2022</p>
+                            <p class="text-gray-600 text-sm mt-2">Validation ID: CISSP-1234567890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-
-    
     <script src="js\documentation.js"></script>
 </body>
 </html>

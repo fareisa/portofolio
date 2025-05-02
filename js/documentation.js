@@ -76,6 +76,18 @@ document.querySelectorAll('.table-of-contents a').forEach(link => {
     });
 });
 
+// Expandable navigation groups
+document.querySelectorAll('.nav-group').forEach(group => {
+    const header = group.querySelector('.flex.items-center.justify-between');
+    const content = group.querySelector('.nav-group-content');
+    const icon = group.querySelector('.nav-group-icon');
+    
+    header.addEventListener('click', function() {
+        content.classList.toggle('expanded');
+        icon.classList.toggle('rotated');
+    });
+});
+
 // Set last updated date
 document.getElementById('last-updated').textContent = new Date().toLocaleDateString('en-US', {
     year: 'numeric',
