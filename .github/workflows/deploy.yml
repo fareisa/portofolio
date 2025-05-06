@@ -21,7 +21,8 @@ jobs:
                 key: ${{ secrets.FAREISA_SYTES_NET }}
                 script: |
                     cd /var/www/html/faris/
-                    git pull origin main -r
-                    git commit -m "tes"
+                    git stash
+                    git stash pop
+                    git pull origin main 
                 
             
