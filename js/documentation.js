@@ -94,3 +94,30 @@ document.getElementById('last-updated').textContent = new Date().toLocaleDateStr
     month: 'long',
     day: 'numeric'
 });
+
+// Check for hash in URL and navigate to the corresponding section
+document.addEventListener('DOMContentLoaded', function () {
+    const hash = window.location.hash.substring(1); // Get the hash without the #
+    if (hash) {
+        const targetSection = document.getElementById(hash);
+        if (targetSection) {
+            // Hide all sections
+            document.querySelectorAll('.doc-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the target section
+            targetSection.classList.add('active');
+
+            // Update active navigation link
+            document.querySelectorAll('.doc-nav-link').forEach(navLink => {
+                navLink.classList.remove('active-doc');
+                if (navLink.getAttribute('data-section') === hash) {
+                    navLink.classList.add('active-doc');
+                    sidebarGroup.classList.add('expanded');
+                }
+            });
+
+        }
+    }
+});
