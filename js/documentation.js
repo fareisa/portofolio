@@ -89,7 +89,7 @@ document.querySelectorAll('.nav-group').forEach(group => {
 });
 
 // Set last updated date
-document.getElementById('last-updated').textContent = new Date().toLocaleDateString('en-US', {
+document.getElementById('last-updated').textContent = new Date().toLocaleDateString('en-ID', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
